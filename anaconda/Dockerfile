@@ -1,6 +1,6 @@
 FROM debian:7.4
 
-MAINTAINER Kamil Kwiek <kamil.kwiek@continuum.io>
+MAINTAINER Ata Niyazov <ata.niazov@gmail.com>
 
 RUN apt-get update --fix-missing && apt-get install -y wget bzip2 ca-certificates \
     libglib2.0-0 libxext6 libsm6 libxrender1 \
@@ -24,4 +24,12 @@ ENV PATH /opt/conda/bin:$PATH
 ENV LANG C.UTF-8
 
 ENTRYPOINT [ "/usr/bin/tini", "--" ]
-CMD [ "/bin/bash" ]
+
+VOLUME /jupyter
+WORKDIR /jupyter
+
+EXPOSE 8888
+
+ADD jupyter.sh /
+
+CMD ["/jupyter.sh"]
