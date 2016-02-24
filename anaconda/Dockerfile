@@ -25,11 +25,11 @@ ENV LANG C.UTF-8
 
 ENTRYPOINT [ "/usr/bin/tini", "--" ]
 
-VOLUME /jupyter
-WORKDIR /jupyter
+VOLUME /notebook
+WORKDIR /notebook
 
 EXPOSE 8888
 
-ADD jupyter.sh /
+ADD notebook.sh /
 
-CMD ["/jupyter.sh"]
+CMD ["/notebook.sh"]
