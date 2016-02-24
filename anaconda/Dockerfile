@@ -1,4 +1,4 @@
-FROM debian:7.4
+FROM debian:7.9
 
 MAINTAINER Ata Niyazov <ata.niazov@gmail.com>
 
