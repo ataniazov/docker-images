@@ -24,7 +24,7 @@ fi
 # as an environment variable within IPython kernels themselves
 HASH=$(python3 -c "from IPython.lib import passwd; print(passwd('${PASSWORD}'))")
 unset PASSWORD
-pip install ipython-sql
+
 ipython notebook --no-browser --port 8888 --ip=* $CERTFILE_OPTION --NotebookApp.password="$HASH"
 
 unset HASH
