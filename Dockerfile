@@ -25,6 +25,8 @@ ENV LANG C.UTF-8
 
 ENTRYPOINT [ "/usr/bin/tini", "--" ]
 
+RUN pip install ipython-sql
+
 VOLUME /notebook
 WORKDIR /notebook
 
