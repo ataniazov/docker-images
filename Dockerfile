@@ -15,7 +15,6 @@ RUN apt-get install -y curl grep sed dpkg && \
     curl -L "https://github.com/krallin/tini/releases/download/v${TINI_VERSION}/tini_${TINI_VERSION}.deb" > tini.deb && \
     dpkg -i tini.deb && \
     rm tini.deb && \
-    pip install ipython-sql && \
     apt-get clean
 
 ENV PATH /opt/conda/bin:$PATH
