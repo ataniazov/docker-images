@@ -32,4 +32,4 @@ WORKDIR /notebook
 
 EXPOSE 8888
 
-CMD [ "/bin/bash" ]
+CMD [ "ipython", "notebook", "--no-browser", "--ip=*" ]
