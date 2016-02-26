@@ -15,7 +15,7 @@ If you are using **Linux** and have a
 [Docker daemon running](https://docs.docker.com/installation/),
 e.g. reachable on `localhost`, start a container with:
 
-    $ docker run --rm -it -p 8888:8888 ataniazov/kouintro2db /bin/bash
+    $ docker run --rm -it -p 8888:8888 ataniazov/kouintro2db
 
 In your browser, open the URL `http://localhost:8888/`.
 
