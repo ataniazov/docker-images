@@ -34,4 +34,4 @@ EXPOSE 8888
 
 ADD notebook.sh /
 
-CMD ["/notebook.sh"]
+CMD [ "/bin/bash" ]
