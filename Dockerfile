@@ -27,8 +27,9 @@ ENTRYPOINT [ "/usr/bin/tini", "--" ]
 
 RUN pip install ipython-sql
 
-VOLUME /notebook
-WORKDIR /notebook
+RUN git clone https://github.com/HazyResearch/cs145-notebooks.git
+
+WORKDIR /cs145-notebooks
 
 EXPOSE 8888
 
